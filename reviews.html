@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!--Author:Zhiping Yu,000822513-->
+		<title>Cycling Tours</title>
+		<link href="cyclestyles.css" rel="stylesheet" type="text/css" />
+		<style>
+			*{
+				padding:0px;
+				margin:0px;
+			}
+			nav a{
+				text-decoration:none;
+				border-radius:0px 10px 0px 0px;
+				border:1px solid black;
+				color:white;
+				padding:10px 25px ;
+				margin:10px;
+				background-color:#BBCCDD;
+			}
+			form{
+				border-top:1px solid black;
+				border-right:1px solid black;
+				border-bottom:1px solid black;
+				background-color:#4681A4;
+				width:80%;
+				margin:0px auto;
+			}
+			fieldset.trip{
+				border:1px solid white;
+				margin:20px 15px;
+				padding:10px;	
+			}
+			
+			legend{
+				color:white;
+				padding:5px 5px 0px 5px;
+			}
+			div.information input{
+				background-color:#ffffe6;
+				
+			}
+			
+			
+			div.information label{
+				display:block;
+				float:left;
+				margin-right:1em;
+				text-align:right;
+				width:140px;	
+				
+			}
+			div.information{
+				margin-top:10px;
+				
+			}
+			select#season{
+				height:70px;
+				padding:2px 0px;	
+			}
+			div#secondBlock input,div#thirdBlock input {
+				width:180px;
+			}
+			div#forthBlock input{
+				width:100px;
+			}
+			div#fifthBlock input{
+				width:350px;
+			}
+			div#location select{
+				padding:5px;
+			}
+			div#rate{
+				margin-top:15px;
+				margin-bottom:5px;
+			
+			}
+			div#buttons input#submit{
+				margin-left:15px;
+				background-color:#ffffe6;
+				padding:5px;
+				font-size:1.2em;
+				
+			}
+			div#buttons input#reset{
+				margin-left:5px;
+				background-color:#ffffe6;
+				padding:5px;
+				font-size:1.2em;	
+			}
+			div#buttons{
+				padding-bottom:30px;
+			}
+			figure{
+				text-align:center;
+				margin:10px;
+			
+			}
+			figure img{
+				width:60%;
+				height:60%;
+			
+			}
+				
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Fall 2019 Reviews</h1>
+		</header>
+		<nav>
+			<a href="Reviews.html">Reviews</a>
+			<a href="Seminars.html">Seminars</a>
+		</nav>
+		<form action="https://csunix.mohawkcollege.ca/tooltime/showit.pl" method="post">
+			<fieldset class="trip">
+				<legend>About You(optional)</legend>
+				<div id="firstBlock">
+					<label for="season">I usually prefer to trips this time of year(select all that apply):</label>
+					<div id="prefer">
+						<select name="pref" id="season" size="4" multiple>
+							<option>Winter</option>
+							<option>Spring</option>
+							<option>Summer</option>
+							<option>Fall</option>
+						</select>
+					</div>
+				</div>
+				<div class="information">
+					<div id="secondBlock">
+						<label for="first" >First Name</label>
+						<input name="firstname" id="first" type="text" maxlength="20" />
+					</div>
+					<div id="thirdBlock">
+						<label for="last">Last Name</label>
+						<input name="lastname" id="last" type="text" maxlength="20" />
+					</div>
+					<div id="forthBlock">
+						<label for="phonenumber">Phone Number</label>
+						<input name="phone" id="phonenumber" type="tel" maxlength="20" placeholder="123-456-7890" />
+					</div>
+					<div id="fifthBlock">
+						<label for="email">Email Address</label>
+						<input name="emailaddress" id="email" type="email" maxlength="40" placeholder="name@example.com"/>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset class="trip">
+				<legend>Trip Reviews</legend>
+				<div id="location">
+					<select name="trip">
+						<option value="AlbertaRural">Alberta Rural</option>
+						<option value="BCCoast">B.C.Coast</option>
+						<option value="OntarioLakeSuperior">Ontario Lake Superior</option>
+						<option value="PEI">PEI</option>
+						<option value="NovaScotiaCabotTrail" selected>Nova Scotia Cabot Trail</option>
+					</select>
+					<select name="duration">
+						<option value="5d">5 Days</option>
+						<option value="7d">7 Days</option>
+						<option value="10d">10 Days</option>
+						<option value="14d">14 Days</option>
+					</select>
+				</div>
+				<div id="rate">
+					<label>Your rating:</label>
+					<div>
+						<input name="rating" value="4" type="radio" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+					</div>
+					<div>
+						<input name="rating" value="3" type="radio" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+					</div>
+					<div>
+						<input name="rating" value="2" type="radio" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+					</div>
+					<div>
+						<input name="rating" value="1" type="radio" />
+						<img src="images/wheel_sm.jpg" alt="wheelpicture" />
+					</div>	
+				</div>
+				<label for="comment">Comments</label>
+				<div>
+					<textarea name="comments" rows="7" cols="65" id="comment"></textarea>
+				</div>
+			</fieldset>
+			<fieldset class="trip">
+				<legend>I would be interested in these trips:(check all that apply)</legend>
+				<div>
+					<input name="interested" id="sea" value="coast" type="checkbox" />
+					<label for="sea">Sea or Lake Coast</label>
+				</div>
+				<div>
+					<input name="interested" id="rural" value="rural" type="checkbox" />
+					<label for="rural">Rural</label>
+				</div>
+				<div>
+					<input name="interested" id="mountains" value="mountains" type="checkbox" checked />
+					<label for="mountains">Mountains</label>
+				</div>
+				<div>
+					<input name="interested" id="other" value="other" type="checkbox" />
+					<label for="others">Other(please specify)</label>
+					<input name="otherdestination" id="others" type="text" />
+				</div>	
+			</fieldset>
+			<div id="buttons">
+				<input type="submit" value="SEND REVIEW" id="submit" />
+				<input type="reset" value="CANCEL" id="reset" />	
+			</div>
+			<input name ="formname" value="Zhiping Yu Trip Review" type="hidden"/>
+		</form>
+		<figure>
+			<img src="images/screenshot.JPG" alt="trip review" />
+		</figure>
+		
+	</body>
+</html>

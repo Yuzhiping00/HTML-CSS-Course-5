@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!--Author:Zhiping Yu,000822513-->
+		<title>Cycling Tours</title>
+		<link href="cyclestyles.css" type="text/css" rel="stylesheet" />
+		<style>
+			*{
+				padding:0px;
+				margin:0px;
+			}
+			nav a{
+				text-decoration:none;
+				border-radius:0px 10px 0px 0px;
+				border-left:2px solid black;
+				border-right:2px solid black;
+				border-top:2px solid black;
+				border-bottom:2px solid white;
+				color:white;
+				padding:10px 25px ;
+				margin:10px;
+				background-color:#BBCCDD;
+			}
+			#smalltable{
+				width:90%;
+				margin:5px auto;
+				text-align:left;	
+			}
+			<!--#smalltable tr{
+				float:left;
+			}-->
+			#smalltable td{
+				padding-right:5px;
+			}
+		
+			#smalltable caption{
+				text-align:left;
+			}
+			#smalltable th{
+				width:10px;
+			
+			}
+			#smalltable th.lightskyblue{
+				
+				background-color:lightskyblue;
+				
+			}
+			#smalltable th.ADFF2F{
+				
+				background-color:#ADFF2F;
+			}
+			#smalltable th.BA55D3{
+				
+				background-color:#BA55D3;
+			}
+			#smalltable th.FFB6C1{
+			
+				background-color:#FFB6C1;
+			}
+			#bigtable{
+				border-collapse:collapse;
+				border:1px solid gray;
+				width:90%;
+				margin:15px auto 2px;
+			}
+			#bigtable thead{
+				color:white;
+				border:1px solid gray;
+				background-color:#888888;
+			}
+			#bigtable th{
+				padding:10px;
+				border:1px solid black;
+			}
+			#bigtable td{
+				border:1px solid black;
+				padding-left:5px;
+			
+			}
+			#bigtable caption{
+				caption-side:bottom;
+				text-align:right;
+				font-size:0.8em;
+				
+			
+			}
+			#bigtable colgroup col#firstCol{
+				background-color:#ddeeff;
+				width:4%;
+			
+			}
+			#bigtable colgroup col.timeCols{
+				width:13.7%;
+			
+			}
+			#bigtable tbody tr td.reserve{
+				background-image:url(images/dust.jpg);
+				text-align:center;
+				font-weight:bold;
+			
+			}
+			#bigtable tbody tr td.repair{
+				background-color:#BA55D3;
+				vertical-align:top;
+			
+			}
+			#bigtable tbody tr td.beginner{
+				background-color:lightskyblue;
+			
+			}
+			#bigtable tbody tr td.trip{
+				background-color:#FFB6C1;
+				vertical-align:top;
+			
+			}
+			#bigtable tbody tr td.longdistance{
+				background-color:#ADFF2F;
+				
+			
+			}
+			div#line{
+				border-top:2px solid black;
+			
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Cycling Trip Seminars</h1>
+		</header>
+		<nav>
+			<a href="reviews.html">Reviews</a>
+			<a href="seminars.html">Seminars</a>
+		</nav>
+		<table id="smalltable">
+			<caption>Legend:</caption>
+			<tr>
+				<th class="lightskyblue"></th><td>Beginner Cycling</td>
+				<th class="ADFF2F"></th><td>Long Distance Cycling</td>
+				<th class="BA55D3"></th><td>Bicycle Repair</td>
+				<th class="FFB6C1"></th><td>Trip Planning</td>
+			</tr>
+		</table>
+		<table id="bigtable">
+			<caption>Schedule is subject to change</caption>
+			<colgroup>
+				<col id="firstCol" />
+				<col class="timeCols" span="7" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>Day</th>
+					<th>7 am - 9 am</th>
+					<th>9 am - 11 am</th>
+					<th>11 am - 12 pm</th>
+					<th>12 pm - 2 pm</th>
+					<th>2 pm - 3 pm</th>
+					<th>6 pm - 8 pm</th>
+					<th>8 pm - 10 pm</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Monday</th>
+					<td class ="reserve" colspan="7">Reserved for groups</td>
+				</tr>
+				<tr>
+					<th>Tuesday</th>
+					<td class="repair">Bicycle Repair</td>
+					<td class="beginner" colspan="4">Beginner Cycling</td>
+					<td class="trip" colspan="2">Trip Planning</td>
+				</tr>
+				<tr>
+					<th>Wednesday</th>
+					<td class="longdistance" rowspan="2">Long Distance Cycling Part1</td>
+					<td></td>
+					<td class="beginner">Beginner Cycling</td>
+					<td class ="trip" rowspan="2">Trip Planning for Asia</td>
+					<td class="repair" rowspan="3" colspan="2">Bicycle Repair</td>
+					<td class="longdistance" rowspan="2">Long Distance Cycling Part2</td>
+				</tr>
+				<tr>
+					<th>Thursday</th>
+					<td class="beginner">Beginner Cycling</td>
+					<td></td>	
+				</tr>
+				<tr>
+					<th>Friday</th>
+					<td class ="trip" rowspan="4">Trip Planning for Europe</td>
+					<td></td>
+					<td class="beginner">Beginner Cycling</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Saturday</th>
+					<td class ="repair" colspan="3" rowspan="2">Bicycle Repair</td>
+					<td class="beginner">Beginer Cycling</td>
+					<td class="longdistance" colspan="2" rowspan="2">Long Distance Cycling Part2</td>
+				</tr>
+				<tr>
+					<th>Sunday</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th>Holidays</th>
+					<td class="longdistance">Long Distance Cycling</td>
+					<td class="reserve" colspan="5">No Seminars</td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="line"></div>
+	</body>
+</html>
